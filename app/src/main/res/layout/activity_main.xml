@@ -10,15 +10,68 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center|top"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Rock Paper Scissors!"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/UserPrompt"
+            android:layout_width="302dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please choose your weapon:"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/rockButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rock" />
+
+        <Button
+            android:id="@+id/paperButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paper" />
+
+        <Button
+            android:id="@+id/scissorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scissors" />
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="text" />
+
+        <TextView
+            android:id="@+id/playerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="text" />
+
+        <TextView
+            android:id="@+id/computerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="text" />
+
+        <TextView
+            android:id="@+id/congratsMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="text" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
