@@ -2,9 +2,7 @@ package com.example.rockpaperscissors;
 
 public class RockPaperScissors {
 
-
-
-    private boolean isDraw(Weapon p, Weapon c){
+    public boolean isDraw(Weapon p, Weapon c){
         return false;
     }
 

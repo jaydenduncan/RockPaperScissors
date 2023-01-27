@@ -47,31 +47,27 @@
 
         <TextView
             android:id="@+id/scoreText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="text" />
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/playerText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="text" />
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/computerText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="text" />
+            android:gravity="center" />
 
         <TextView
-            android:id="@+id/congratsMessage"
-            android:layout_width="match_parent"
+            android:id="@+id/congratsText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="text" />
+            android:gravity="center" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
