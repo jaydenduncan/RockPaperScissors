@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
                     player.setScore(player.getScore() + 1);
 
-                    StringBuilder newscoreMessage = new StringBuilder();
-                    newscoreMessage.append("Player: ").append(player.getScore()).append(", ");
-                    newscoreMessage.append("Computer: ").append(computer.getScore());
-                    binding.scoreText.setText(newscoreMessage);
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
 
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Player wins ... ");
@@ -72,10 +72,138 @@ public class MainActivity extends AppCompatActivity {
 
                     computer.setScore(computer.getScore() + 1);
 
-                    StringBuilder newscoreMessage = new StringBuilder();
-                    newscoreMessage.append("Player: ").append(player.getScore()).append(", ");
-                    newscoreMessage.append("Computer: ").append(computer.getScore());
-                    binding.scoreText.setText(newscoreMessage);
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
+
+                    StringBuilder congratsMessage = new StringBuilder();
+                    congratsMessage.append("Computer wins ... ");
+                    congratsMessage.append(computer.getWeapon()).append(" beats ").append(player.getWeapon());
+                    congratsMessage.append("!");
+                    binding.congratsText.setText(congratsMessage);
+
+                }
+                else if(game.isDraw(player.getWeapon(), computer.getWeapon())){
+
+                    binding.congratsText.setText("It was a draw!");
+
+                }
+
+            }
+        });
+
+        paperBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player.setWeapon(Weapon.PAPER);
+
+                computer.setWeapon(chooseWeapon());
+
+                // Print score to the scoreText TextView
+                StringBuilder scoreMessage = new StringBuilder();
+                scoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                scoreMessage.append("Computer: ").append(computer.getScore());
+                binding.scoreText.setText(scoreMessage);
+
+                // Print player's weapon to playerText TextView
+                StringBuilder playerMessage = new StringBuilder();
+                playerMessage.append("Player's Weapon: ").append(player.getWeapon());
+                binding.playerText.setText(playerMessage);
+
+                // Print computer's weapon to computerText TextView
+                StringBuilder computerMessage = new StringBuilder();
+                computerMessage.append("Computer's Weapon: ").append(computer.getWeapon());
+                binding.computerText.setText(computerMessage);
+
+                // Print congrats message to congratsText TextView
+                if(game.isPlayerWinner(player.getWeapon(), computer.getWeapon())){
+
+                    player.setScore(player.getScore() + 1);
+
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
+
+                    StringBuilder congratsMessage = new StringBuilder();
+                    congratsMessage.append("Player wins ... ");
+                    congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
+                    binding.congratsText.setText(congratsMessage);
+
+                }
+                else if(game.isComputerWinner(player.getWeapon(), computer.getWeapon())){
+
+                    computer.setScore(computer.getScore() + 1);
+
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
+
+                    StringBuilder congratsMessage = new StringBuilder();
+                    congratsMessage.append("Computer wins ... ");
+                    congratsMessage.append(computer.getWeapon()).append(" beats ").append(player.getWeapon());
+                    congratsMessage.append("!");
+                    binding.congratsText.setText(congratsMessage);
+
+                }
+                else if(game.isDraw(player.getWeapon(), computer.getWeapon())){
+
+                    binding.congratsText.setText("It was a draw!");
+
+                }
+
+            }
+        });
+
+        scissorsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player.setWeapon(Weapon.SCISSORS);
+
+                computer.setWeapon(chooseWeapon());
+
+                // Print score to the scoreText TextView
+                StringBuilder scoreMessage = new StringBuilder();
+                scoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                scoreMessage.append("Computer: ").append(computer.getScore());
+                binding.scoreText.setText(scoreMessage);
+
+                // Print player's weapon to playerText TextView
+                StringBuilder playerMessage = new StringBuilder();
+                playerMessage.append("Player's Weapon: ").append(player.getWeapon());
+                binding.playerText.setText(playerMessage);
+
+                // Print computer's weapon to computerText TextView
+                StringBuilder computerMessage = new StringBuilder();
+                computerMessage.append("Computer's Weapon: ").append(computer.getWeapon());
+                binding.computerText.setText(computerMessage);
+
+                // Print congrats message to congratsText TextView
+                if(game.isPlayerWinner(player.getWeapon(), computer.getWeapon())){
+
+                    player.setScore(player.getScore() + 1);
+
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
+
+                    StringBuilder congratsMessage = new StringBuilder();
+                    congratsMessage.append("Player wins ... ");
+                    congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
+                    binding.congratsText.setText(congratsMessage);
+
+                }
+                else if(game.isComputerWinner(player.getWeapon(), computer.getWeapon())){
+
+                    computer.setScore(computer.getScore() + 1);
+
+                    StringBuilder newScoreMessage = new StringBuilder();
+                    newScoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newScoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newScoreMessage);
 
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Computer wins ... ");
