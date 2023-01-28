@@ -57,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
                     player.setScore(player.getScore() + 1);
 
+                    StringBuilder newscoreMessage = new StringBuilder();
+                    newscoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newscoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newscoreMessage);
+
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Player wins ... ");
                     congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
@@ -66,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
                 else if(game.isComputerWinner(player.getWeapon(), computer.getWeapon())){
 
                     computer.setScore(computer.getScore() + 1);
+
+                    StringBuilder newscoreMessage = new StringBuilder();
+                    newscoreMessage.append("Player: ").append(player.getScore()).append(", ");
+                    newscoreMessage.append("Computer: ").append(computer.getScore());
+                    binding.scoreText.setText(newscoreMessage);
 
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Computer wins ... ");
@@ -87,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected static Weapon chooseWeapon(){
         int randNum = (int)(Math.random() * 3);
-
-        System.out.println(randNum);
 
         return Weapon.values()[randNum];
     }
