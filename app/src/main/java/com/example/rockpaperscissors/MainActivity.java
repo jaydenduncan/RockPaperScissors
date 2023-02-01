@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Player wins ... ");
                     congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
+                    congratsMessage.append("!");
                     binding.congratsText.setText(congratsMessage);
 
                 }
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Player wins ... ");
                     congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
+                    congratsMessage.append("!");
                     binding.congratsText.setText(congratsMessage);
 
                 }
@@ -193,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
                     StringBuilder congratsMessage = new StringBuilder();
                     congratsMessage.append("Player wins ... ");
                     congratsMessage.append(player.getWeapon()).append(" beats ").append(computer.getWeapon());
+                    congratsMessage.append("!");
                     binding.congratsText.setText(congratsMessage);
 
                 }
